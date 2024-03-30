@@ -16,9 +16,17 @@
   örnek output: ""
 */
 
-function dosyaAdiniBul(/* kodlar buraya */) {
-  // kodlar buraya
+function dosyaAdiniBul(dosyaYolu) {
+  if (dosyaYolu === "") {
+    return "";
+  }
+  const dosyaYoluParcalari = dosyaYolu.split("/");
+  console.log("dosyaYoluParcalari", dosyaYoluParcalari);
+  const dosyaAdi = dosyaYoluParcalari[dosyaYoluParcalari.length - 1];
+  return dosyaAdi;
 }
+
+console.log(dosyaAdiniBul("C:/Users/johnsmith/Music/Beethoven_5.mp3"));
 
 /*
   GÖREV 2
