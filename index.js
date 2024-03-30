@@ -80,9 +80,21 @@ console.log(
   örnek output: [109, 216, 288, 143, 185, 194]
 */
 
-function ortalamadanBuyukleriBul(/* kodlar buraya */) {
-  // kodlar buraya
+function ortalamadanBuyukleriBul(sayiDizisi, ortalamaCallback) {
+  const ortalama = ortalamaCallback(sayiDizisi);
+
+  if (ortalama === null) {
+    return null;
+  } else {
+    const buyukSayilar = sayiDizisi.filter((sayi) => sayi >= ortalama);
+    return buyukSayilar;
+  }
 }
+
+console.log(
+  "GÖREV 3: ",
+  ortalamadanBuyukleriBul([109, 216, 288, 143, 185, 194], ortalamaBul)
+);
 
 /* !!!! Burdan aşağısını değiştirmeyin !!!! */
 function as() {
